@@ -1,0 +1,18 @@
+.signin-container {
+  /* display: flex; triggers the flexbox layout */
+  display: flex;
+
+  /* justify-content: center; matches 'justify-center' */
+  justify-content: center;
+
+  /* align-items: center; matches 'items-center' */
+  align-items: center;
+
+  /* margin-top and bottom: 5rem (80px); matches 'my-20' */
+  /* (Tailwind's 20 scale is 20 * 0.25rem = 5rem) */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  /* Optional: Ensure it takes up enough height to see the centering */
+  min-height: 200px;
+}

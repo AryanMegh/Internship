@@ -1,0 +1,174 @@
+/*=============== VARIABLES CSS ===============*/
+
+:root {
+  --header-height: 3.5rem;
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(219, 53%, 54%);
+  --first-color-alt: hsl(219, 82%, 63%);
+  --title-color: hsl(211, 25%, 82%);
+  --text-color: hsl(217, 35%, 85%);
+  --text-color-light: hsl(218, 33%, 85%);
+  --white-color: hsl(215, 32%, 93%);
+  --body-color: hsl(240, 61%, 7%);
+  --container-color: hsl(219, 4%, 7%);
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Exo", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --h4-font-size: 1.2rem;
+  --h5-font-size: 1.3rem;
+  --h6-font-size: 1.4rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: biack;
+  color: white;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+.container {
+  max-width: 1024px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+/*=============== FORM SECTION ===============*/
+.form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--body-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--text-color-light);
+}
+
+.form__container label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--body-color);
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.form_footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form_footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.form_footer a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,74 @@
+/* Container styling */
+.navbar {
+  background-color: #000000;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  font-family: "Arial", sans-serif; /* You can swap for 'Roboto' or 'Inter' */
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo-italic {
+  font-style: italic;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+/* Navigation Menu */
+.nav-links {
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #8b7e4b; /* Subtle gold hover effect */
+}
+
+/* CTA Button */
+.order-btn {
+  background-color: #8b7e4b; /* The olive-gold color from your image */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px; /* Fully rounded pill shape */
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+  background-color: #72673d;
+}
+
+/* Responsive: Collapse menu on small screens */
+@media (max-width: 900px) {
+  .nav-links {
+    display: none; /* In a real app, you'd add a hamburger menu here */
+  }
+}

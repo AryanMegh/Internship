@@ -1,0 +1,88 @@
+.main-wrapper {
+  padding: 40px 10%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Hero Section Layout */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.subtitle {
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 15px 0;
+  text-transform: uppercase;
+}
+
+.contact-info p {
+  font-size: 0.85rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.book-btn {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: none;
+  border: 1px solid #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hero Image Styling */
+.hero-image-box {
+  flex: 1.5;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.service-card img {
+  width: 40px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.more-btn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 20px;
+  font-size: 0.7rem;
+  cursor: pointer;
+  border-radius: 3px;
+}

@@ -1,0 +1,109 @@
+.why-choose {
+  padding: 100px 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+.why-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.hours-card {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.schedule-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.day {
+  color: #bbb;
+}
+
+.book-online-btn {
+  margin-top: 2rem;
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 10px 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.book-online-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.why-content {
+  max-width: 600px;
+}
+
+.why-title {
+  font-family: var(--title-font);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.why-subtitle {
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.reasons-list {
+  list-style: none;
+  padding: 0;
+}
+
+.reason-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.reason-item i {
+  color: #fff;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.book-now-btn {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.book-now-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
