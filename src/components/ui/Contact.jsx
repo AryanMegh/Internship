@@ -1,26 +1,45 @@
 import React, { useState } from "react";
 import "../../assets/CSS/Contact_page.css";
+import GlobalApi from "../../../service/GlobalApi";
 
-const ContactForm = () => {
-  // 1. State management for form data
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // 2. Handle input changes
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // 3. Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    // Add your API call logic here
-    alert("Thank you for your message!");
+    setLoading(true);
+
+    try {
+      const resp = await GlobalApi.createContactEntry(formData);
+      console.log("Success:", resp.data);
+      alert("Thank you! Your message has been sent.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      // Improved error logging for 405 debugging
+      console.error("Status Code:", error.response?.status);
+      console.error("Server Response:", error.response?.data);
+
+      if (error.response?.status === 405) {
+        alert(
+          "Error 405: Method not allowed. Please check Strapi permissions for 'create'.",
+        );
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -29,7 +48,6 @@ const ContactForm = () => {
         <h1 className="form__title">Contact Us</h1>
       </div>
       <hr />
-
       <div className="form__container">
         <form onSubmit={handleSubmit} className="SignUp_Form">
           <label htmlFor="name">Name:</label>
@@ -43,10 +61,8 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-
           <br />
           <br />
-
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -58,10 +74,8 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           />
-
           <br />
           <br />
-
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
@@ -73,11 +87,14 @@ const ContactForm = () => {
             onChange={handleChange}
             required
           ></textarea>
-
           <br />
-
-          <button type="submit" className="button" id="Signup_btn">
-            Send Message
+          <button
+            type="submit"
+            className="button"
+            id="Signup_btn"
+            disabled={loading}
+          >
+            {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
@@ -85,4 +102,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default Contact;

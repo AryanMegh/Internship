@@ -1,10 +1,16 @@
 /* Container styling */
 .navbar {
   background-color: #000000;
-  padding: 20px 40px;
+  padding: 15px 40px; /* Slightly reduced padding for a sleeker sticky look */
   display: flex;
   align-items: center;
-  font-family: "Arial", sans-serif; /* You can swap for 'Roboto' or 'Inter' */
+  font-family: "Arial", sans-serif;
+
+  /* STICKY MAGIC */
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it stays above images/content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds depth when scrolling */
 }
 
 .nav-container {
@@ -17,8 +23,11 @@
 /* Logo Styling */
 .logo {
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .logo-italic {
@@ -30,45 +39,44 @@
 /* Navigation Menu */
 .nav-links {
   list-style: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
-.nav-links a {
+/* Target the ScrollLink class directly */
+.nav-item-link {
   text-decoration: none;
   color: #ffffff;
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: #8b7e4b; /* Subtle gold hover effect */
-}
-
-/* CTA Button */
-.order-btn {
-  background-color: #8b7e4b; /* The olive-gold color from your image */
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 50px; /* Fully rounded pill shape */
-  font-weight: bold;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.order-btn:hover {
+.nav-item-link:hover {
+  color: #8b7e4b;
+}
+
+/* Sign-in Button Styling */
+.signin-btn {
+  text-decoration: none;
+  background-color: #8b7e4b;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.signin-btn:hover {
   background-color: #72673d;
 }
 
-/* Responsive: Collapse menu on small screens */
 @media (max-width: 900px) {
   .nav-links {
-    display: none; /* In a real app, you'd add a hamburger menu here */
+    display: none;
   }
 }

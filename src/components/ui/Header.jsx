@@ -1,15 +1,15 @@
 import React from "react";
 import { UserButton, useUser } from "@clerk/clerk-react";
-import { Link as RouterLink } from "react-router-dom"; // Renamed to avoid conflict
-import { Link as ScrollLink } from "react-scroll"; // The smooth scroll magic
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import "../../assets/CSS/Navbar.css";
 
-// Component Imports
 import Hero from "./Hero";
 import Why_choose from "./Why_choose";
 import Pricing from "./Pricing";
 import Services from "./Services";
 import Contact from "./Contact";
+import Book_appointment from "./Book_appointment";
 import Footer from "./Footer";
 
 function Header() {
@@ -25,6 +25,7 @@ function Header() {
 
   return (
     <div className="layout-wrapper">
+      {/* Navbar is now inside the wrapper but styled to stick */}
       <nav className="navbar">
         <div className="nav-container">
           <div className="logo">
@@ -35,8 +36,8 @@ function Header() {
               width={50}
               height={50}
             />
-            <span className="logo-bold">Unisex</span>
-            <span className="logo-italic">Salon</span>
+            <span className="logo-bold">Barbor</span>-
+            <span className="logo-italic">Shop</span>
           </div>
 
           <ul className="nav-links">
@@ -46,7 +47,7 @@ function Header() {
                   to={item.to}
                   spy={true}
                   smooth={true}
-                  offset={-70} // Adjust based on your navbar height
+                  offset={-80} // Adjusted for the sticky navbar height
                   duration={500}
                   className="nav-item-link"
                 >
@@ -55,7 +56,6 @@ function Header() {
               </li>
             ))}
 
-            {/* Auth Logic */}
             <li>
               {isSignedIn ? (
                 <UserButton afterSignOutUrl="/" />
@@ -69,7 +69,6 @@ function Header() {
         </div>
       </nav>
 
-      {/* Main Content with IDs for scrolling */}
       <main className="main-content">
         <section id="home">
           <Hero />
@@ -85,6 +84,9 @@ function Header() {
         </section>
         <section id="contact">
           <Contact />
+        </section>
+        <section id="book_appointment">
+          <Book_appointment />
         </section>
       </main>
 

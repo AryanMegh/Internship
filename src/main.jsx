@@ -9,25 +9,25 @@ import DashboardPage from "../src/page/dashboard/index.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-const router = createBrowserRouter([
+const router=createBrowserRouter([
   {
-    path: "/",
-    element: <HomePage />,
+    path:'/',
+    element:<HomePage />
   },
   {
-    element: <App />,
-    children: [
+    element:<App/>,
+    children:[
       {
-        path: "/dashboard",
-        element: <DashboardPage />,
+        path:'/dashboard',
+        element:<DashboardPage />
       },
-    ],
+    ]
   },
   {
     path: "/auth/sign-in",
-    element: <SignInPage />,
-  },
-]);
+    element: <SignInPage />
+  }
+])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

@@ -1,6 +1,6 @@
 import React from "react";
 import "../../assets/CSS/Service_pae_style.css";
-import serviceImg from "../../assets/IMG/servicimg.jpg";
+import serviceImg from "../../assets/IMG/serviceimg.jpg";
 
 const Services = () => {
   const serviceCards = [
@@ -8,10 +8,12 @@ const Services = () => {
     { title: "Hair Coloring", icon: "🎨" },
     { title: "Bridal & Party Makeup", icon: "💄" },
     { title: "Facials & Skincare", icon: "✨" },
-    { title: "Manicure & Pedicure", icon: "💅" },
-    { title: "Beard Grooming", icon: "🪒" },
-    { title: "Hair Spa & Treatment", icon: "🧖‍♀️" },
-    { title: "Waxing & Threading", icon: "🍯" },
+    { title: "Manicure & Pedicure", icson: "💅" },
+    { title: "Mehandi (Hair & Hands)", icon: "🌿" },
+    { title: "Permanent Hair Extensions", icon: "👱‍♀️" },
+    { title: "Eyelash Extensions", icon: "👁️" },
+    { title: "Body & Foot Massage", icon: "💆‍♂️" },
+    { title: "Hair Growth & Treatments", icon: "🌱" }
   ];
 
   return (

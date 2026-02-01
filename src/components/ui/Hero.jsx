@@ -29,14 +29,13 @@ function Hero() {
 
             {/* Replaced button with Scroll Link */}
             <Link 
-              to="services" 
               smooth={true} 
               duration={800} 
               offset={-70} // Adjust this based on your header height
               className="book-btn"
               style={{ cursor: 'pointer', display: 'inline-block' }}
             >
-              BOOK ONLINE
+              <a href="#book_appointment">BOOK APPOINTMENT</a>
             </Link>
           </div>
 
